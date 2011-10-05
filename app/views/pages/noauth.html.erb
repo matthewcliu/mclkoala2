@@ -1,0 +1,30 @@
+<h1>Pages#noauth</h1>
+<p>Find me in app/views/pages/noauth.html.erb</p>
+
+<div id="profile image">
+	<%= image_tag @graph.get_picture("matthewliu") %>
+</div>
+
+<div id="large image">
+	<%= image_tag @graph.get_picture("matthewliu", :type => "large") %>
+</div>
+
+<div id="name">
+	<%= @name["name"] %>
+</div>
+
+<div id="id">
+	<%= @name["id"] %>
+</div>
+
+<div id="link">
+	<%= @name["link"] %>
+</div>
+
+<div id="name">
+	<%= @name["first_name"] %>
+</div>
+
+<div id="name">
+	<%= @name["last_name"] %>
+</div>

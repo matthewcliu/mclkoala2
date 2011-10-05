@@ -1,0 +1,15 @@
+<h1>Pages#realauth</h1>
+<p>Find me in app/views/pages/realauth.html.erb</p>
+
+<p> Matthew Liu's photos <p>
+
+<div id="profile image">
+	<%= image_tag @graph.get_picture("matthewliu") %>
+</div>
+
+<br />
+
+<% @photos.each do |photo| %>
+	<%= photo["source"] %>
+	<br />
+<% end %>

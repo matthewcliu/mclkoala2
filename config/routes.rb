@@ -1,4 +1,14 @@
 Koala2::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/noauth"
+
+  get "pages/fakeauth"
+
+  get "pages/realauth"
+
+  root :to => "pages#home"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
