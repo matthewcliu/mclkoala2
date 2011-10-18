@@ -22,10 +22,10 @@
 			  info.innerHTML = user.gender + " " + user.username + " " + user.link
            }
          });
-		 FB.api('/friends', function(friends) {
+		 FB.api('me/location', function(location) {
 			 var friendsHTML = document.getElementById('friends');
-			 console.log(friends) 
-			//friendsHTML.innerHTML = JSON.parse(friends)
+			 console.log(location) 
+			friendsHTML.innerHTML = location
 			 
 		 });
        </script>
