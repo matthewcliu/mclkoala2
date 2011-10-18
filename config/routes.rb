@@ -6,6 +6,13 @@ Koala2::Application.routes.draw do
   get "pages/fakeauth"
 
   get "pages/realauth"
+  
+  get "pages/example"
+  
+  get "pages/jquerytest"
+
+  get "pages/davey"
+
 
   root :to => "pages#home"
 
