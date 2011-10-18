@@ -23,9 +23,15 @@
            }
          });
 		 FB.api('me/location', function(location) {
-			 var friendsHTML = document.getElementById('friends');
-			 console.log(location) 
-			friendsHTML.innerHTML = location
+			 var locationHTML = document.getElementById('friends');
+			 console.log(location); 
+			 locationHTML.innerHTML = location
+			 
+		 });
+		 FB.api('me/bio', function(bio) {
+			 var bioHTML = document.getElementById('bio');
+			 console.log(bio);
+			 bioHTML.innerHTML = bio
 			 
 		 });
        </script>
@@ -34,6 +40,8 @@
            		<div id="name"></div>
 				<pre id="info"></pre>
 				<pre id="friends"></pre>
+				<pre id="bio"></pre>
+				
            </div>
     </body>
  </html>
