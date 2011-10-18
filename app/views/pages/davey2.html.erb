@@ -24,7 +24,9 @@
          });
 		 FB.api('/friends', function(friends) {
 			 var friendsHTML = document.getElementById('friends');
-			 friendsHTML.innerHTML = JSON.parse(friends)
+			 console.log(friends) 
+			//friendsHTML.innerHTML = JSON.parse(friends)
+			 
 		 });
        </script>
            <div align="center">
