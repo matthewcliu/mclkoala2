@@ -22,11 +22,16 @@
 			  info.innerHTML = user.gender + " " + user.username + " " + user.link
            }
          });
+		 FB.api('/me', function(friends) {
+			 var friendsHTML = document.getElementById('friends');
+			 friendsHTML.innerHTML = friends.data
+		 });
        </script>
            <div align="center">
            		<img id="image"/>
            		<div id="name"></div>
 				<pre id="info"></pre>
+				<pre id="friends"></pre>
            </div>
     </body>
  </html>
