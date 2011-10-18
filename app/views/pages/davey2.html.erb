@@ -16,13 +16,17 @@
               var image = document.getElementById('image');
               image.src = 'http://graph.facebook.com/' + user.id + '/picture';
               var name = document.getElementById('name');
-              name.innerHTML = user.name
+              name.innerHTML = user.name;
+				
+			  var info = document.getElementById('info');
+			  info.innerHTML = user.friends
            }
          });
        </script>
            <div align="center">
-           <img id="image"/>
-           <div id="name"></div>
+           		<img id="image"/>
+           		<div id="name"></div>
+				<pre id="info"></pre>
            </div>
     </body>
  </html>
