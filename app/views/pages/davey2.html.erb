@@ -24,7 +24,7 @@
          });
 		 FB.api('/friends', function(friends) {
 			 var friendsHTML = document.getElementById('friends');
-			 friendsHTML.innerHTML = friends
+			 friendsHTML.innerHTML = JSON.stringify( friends, null, 4)
 		 });
        </script>
            <div align="center">
