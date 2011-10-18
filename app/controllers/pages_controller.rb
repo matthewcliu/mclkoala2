@@ -29,5 +29,8 @@ class PagesController < ApplicationController
   def davey
   end
 
+  def davey2
+  end
+
 end
 

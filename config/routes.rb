@@ -13,6 +13,8 @@ Koala2::Application.routes.draw do
 
   get "pages/davey"
 
+  get "pages/davey2"
+
 
   root :to => "pages#home"
 
