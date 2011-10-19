@@ -3,16 +3,7 @@
 
 <p> Matthew Liu's photos <p>
 
-	<div id="profile image">
-		<%= image_tag @graph.get_picture("me") %>
-	</div>
 
-	<br />
-
-	<% @photos.each do |photo| %>
-		<%= photo["source"] %>
-		<br />
-	<% end %>
 
 <%= debug cookies %> 
 <%= debug @fb_user_id %> 
