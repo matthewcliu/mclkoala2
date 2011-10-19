@@ -34,6 +34,12 @@
 			 bioHTML.innerHTML = user.quotes
 			 
 		 });
+		 FB.api('/me/likes', function(likes) {
+			 var likesHTML = document.getElementById('likes');
+			 console.log(likes);
+			 bioHTML.innerHTML = likes.data
+			 
+		 });
        </script>
            <div align="center">
            		<img id="image"/>
@@ -41,6 +47,8 @@
 				<pre id="info"></pre>
 				<pre id="friends"></pre>
 				<pre id="bio"></pre>
+				<pre id="likes"></pre>
+				
 				
            </div>
     </body>
