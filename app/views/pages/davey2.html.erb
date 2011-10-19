@@ -22,7 +22,7 @@
 			  info.innerHTML = user.gender + " " + user.username + " " + user.link
            }
          });
-		 FB.api('/me/location', function(location) {
+		 FB.api('/location', function(location) {
 			 var locationHTML = document.getElementById('friends');
 			 console.log(location); 
 			 locationHTML.innerHTML = location
