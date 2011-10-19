@@ -11,6 +11,7 @@
             appId:'278272958863760', cookie:true, 
             status:true, xfbml:true 
          });
+
          FB.api('/me', function(user) {
            if(user != null) {
               var image = document.getElementById('image');
@@ -25,7 +26,7 @@
 		 FB.api('/me', function(user) {
 			 var locationHTML = document.getElementById('friends');
 			 console.log(user.location); 
-			 locationHTML.innerHTML = user.location
+			 locationHTML.innerHTML = JSON.parse(user.location)
 			 
 		 });
 		 FB.api('/me', function(user) {
@@ -37,19 +38,22 @@
 		 FB.api('/me/likes', function(likes) {
 			 var likesHTML = document.getElementById('likes');
 			 console.log(likes);
-			 likesHTML.innerHTML = likes.data
+			 var likesHTMLobj = eval("function(){return " + likesHTML + ";})()");
+			 alert(likesHTMLobj.result);
+			 //likesHTML.innerHTML = likes.data
 			 
 		 });
        </script>
-           <div align="center">
+	   <fb:login-button perms="email, user_checkins, user_about_me, user_location, user_likes">
+         Login with Facebook
+       </fb:login-button>
+         <div align="center">
            		<img id="image"/>
            		<div id="name"></div>
 				<pre id="info"></pre>
 				<pre id="friends"></pre>
 				<pre id="bio"></pre>
 				<pre id="likes"></pre>
-				
-				
-           </div>
+         </div>
     </body>
  </html>
