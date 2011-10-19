@@ -24,10 +24,14 @@
            }
          });
 		 FB.api('/me', function(user) {
-			 var locationHTML = document.getElementById('friends');
+			 var locationHTML = document.getElementById('location');
 			 console.log(user.location); 
-			 locationHTML.innerHTML = JSON.parse(user.location)
+			 locationHTML.innerHTML = user.location
 			 
+		 });
+		 FB.api('/me', function(location) {
+			 var locationHTML = document.getElementById('location2');
+			 locationHTML.innerHTML = alert(location.name);
 		 });
 		 FB.api('/me', function(user) {
 			 var bioHTML = document.getElementById('bio');
@@ -38,11 +42,10 @@
 		 FB.api('/me/likes', function(likes) {
 			 var likesHTML = document.getElementById('likes');
 			 console.log(likes);
-			 var likesHTMLobj = eval("function(){return " + likesHTML + ";})()");
-			 alert(likesHTMLobj.result);
-			 //likesHTML.innerHTML = likes.data
+			 likesHTML.innerHTML = likes.data
 			 
 		 });
+
        </script>
 	   <fb:login-button perms="email, user_checkins, user_about_me, user_location, user_likes">
          Login with Facebook
@@ -51,7 +54,8 @@
            		<img id="image"/>
            		<div id="name"></div>
 				<pre id="info"></pre>
-				<pre id="friends"></pre>
+				<pre id="location"></pre>
+				<pre id="location2"></pre>
 				<pre id="bio"></pre>
 				<pre id="likes"></pre>
          </div>
