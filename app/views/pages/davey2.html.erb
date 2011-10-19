@@ -22,16 +22,16 @@
 			  info.innerHTML = user.gender + " " + user.username + " " + user.link
            }
          });
-		 FB.api('/location', function(location) {
+		 FB.api('/me', function(user) {
 			 var locationHTML = document.getElementById('friends');
-			 console.log(location); 
-			 locationHTML.innerHTML = location
+			 console.log(user.location); 
+			 locationHTML.innerHTML = user.location
 			 
 		 });
-		 FB.api('/me/bio', function(bio) {
+		 FB.api('/me', function(user) {
 			 var bioHTML = document.getElementById('bio');
-			 console.log(bio);
-			 bioHTML.innerHTML = bio
+			 console.log(user.bio);
+			 bioHTML.innerHTML = user.bio
 			 
 		 });
        </script>
