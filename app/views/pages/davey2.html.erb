@@ -25,7 +25,7 @@
 		 FB.api('/me', function(user) {
 			 var locationHTML = document.getElementById('friends');
 			 console.log(user.location); 
-			 locationHTML.innerHTML = stringify(user.location, null, 4)
+			 locationHTML.innerHTML = user.location
 			 
 		 });
 		 FB.api('/me', function(user) {
@@ -37,7 +37,7 @@
 		 FB.api('/me/likes', function(likes) {
 			 var likesHTML = document.getElementById('likes');
 			 console.log(likes);
-			 likesHTML.innerHTML = stringify(likes.data, null, 4)
+			 likesHTML.innerHTML = likes.data
 			 
 		 });
        </script>
