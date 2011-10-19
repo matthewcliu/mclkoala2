@@ -8,6 +8,7 @@ gem 'rails', '3.0.9'
 gem 'sqlite3'
 gem "koala", "~> 1.2.0beta"
 gem 'rake', '0.8.7'
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'

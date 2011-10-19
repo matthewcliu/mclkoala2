@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def realauth
-    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
+    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/davey2')
     @oauth.get_user_info_from_cookies(cookies)
     @photos = @graph.get_connections("me", "photos")
   end
