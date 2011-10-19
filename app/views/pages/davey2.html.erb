@@ -29,10 +29,7 @@
 			 locationHTML.innerHTML = user.location
 			 
 		 });
-		 FB.api('/me', function(location) {
-			 var locationHTML = document.getElementById('location2');
-			 locationHTML.innerHTML = alert(location.name);
-		 });
+
 		 FB.api('/me', function(user) {
 			 var bioHTML = document.getElementById('bio');
 			 console.log(user.quotes);
