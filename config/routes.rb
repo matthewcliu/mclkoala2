@@ -1,19 +1,21 @@
 Koala2::Application.routes.draw do
-  get "pages/home"
+  #get "pages/home"
+  match "welcome" => 'pages#welcome', :as => :welcome
 
-  get "pages/noauth"
+  #get "pages/noauth"
 
-  get "pages/fakeauth"
+  #get "pages/fakeauth"
 
-  get "pages/realauth"
+  #get "pages/realauth"
   
-  get "pages/example"
+  #get "pages/example"
   
-  get "pages/jquerytest"
+  #get "pages/jquerytest"
 
-  get "pages/davey"
+  #get "pages/davey"
 
-  get "pages/davey2"
+ 
+  #get "pages/davey2"
 
 
   root :to => "pages#home"

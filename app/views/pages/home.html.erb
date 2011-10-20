@@ -1,2 +1,22 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+	<head>
+		<title>My Facebook Login Page</title>
+	</head>
+	<body>
+   	<div id="fb-root"></div>
+   	<script src="http://connect.facebook.net/en_US/all.js">
+   	</script>
+   	<script>
+     	FB.init({ 
+        appId:'278272958863760', cookie:true, 
+        status:true, xfbml:true 
+      });
+      FB.Event.subscribe('auth.login', function () {
+         window.location = "http://bday-reminder.com/welcome";
+      });
+		</script>
+    <fb:login-button perms="email, user_checkins, user_about_me, user_location, user_likes, offline_access">
+      Login with Facebook
+    </fb:login-button>
+	</body>
+</html>
