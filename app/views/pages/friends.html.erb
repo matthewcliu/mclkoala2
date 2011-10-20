@@ -7,12 +7,9 @@
 	</div>
 	<br />
 
-	<% @friends.each do |friend| %>
-		
-		<%= friend["first_name"] + " " + friend["last_name"] %>
-		<br />
-	<% end %>
+
 
 <%= debug cookies %> 
 <%= debug @fb_user_id %> 
 <%= debug @fb_user %>
+<%= debug @friends %>
