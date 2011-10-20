@@ -3,16 +3,7 @@
 
 <p> Matthew Liu's likes <p>
 
-<div id="profile image">
-	<%= image_tag @graph.get_picture("me") %>
-</div>
 
-<br />
-
-<% @likes.each do |like| %>
-	<%= like["name"] %>
-	<br />
-<% end %>
 
 <%= debug cookies %> 
 <%= debug @fb_user_id %> 
