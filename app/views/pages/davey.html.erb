@@ -13,6 +13,9 @@
            appId:'278272958863760', cookie:true, 
            status:true, xfbml:true 
         });
+        FB.Event.subscribe('auth.login', function () {
+           window.location = "http://bday-reminder.com/pages/realauth";
+        });
      </script>
      <fb:login-button perms="email, user_checkins, user_about_me, user_location, user_likes">
         Login with Facebook
