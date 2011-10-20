@@ -4,12 +4,12 @@
 
 	<div id="profile image">
 		<%= image_tag @graph.get_picture("me") %>
-		<%= image_tag @graph.get_picture("3618") %>
 		
 	</div>
 	<br />
 
 	<% @friends.each do |friend| %>
+		<%= image_tag @graph.get_picture(friend["id"]) %>
 		<%= friend["name"] %>
 		<br />
 	<% end %>
