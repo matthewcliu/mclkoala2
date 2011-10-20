@@ -18,7 +18,7 @@ class PagesController < ApplicationController
     @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
-    auth_token = @fb_user.access_token
+    auth_token = @fb_user[:access_token]
     @graph = Koala::Facebook::API.new(auth_token)
     @likes = @fb_user.get_connections("me", "likes")
   end
