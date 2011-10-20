@@ -1,14 +1,17 @@
-<h1>Welcome to the test FB App</h1>
-<p>Click on a link below</p>
+<h1>Likes</h1>
+
+<p><%= @fb_user %>'s Likes <p>
 
 	<div id="profile image">
 		<%= image_tag @graph.get_picture("me") %>
 	</div>
+
 	<br />
 
-	<div>
-		<%= link_to 'likes' %>
-	</div>
+	<% @likes.each do |like| %>
+		<%= like["name"] %>
+		<br />
+	<% end %>
 
 <%= debug cookies %> 
 <%= debug @fb_user_id %> 

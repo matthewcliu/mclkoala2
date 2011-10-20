@@ -1,0 +1,60 @@
+<html xmlns:fb="https://www.facebook.com/2008/fbml">
+    <head>
+      <title>My Great Website</title>
+    </head>
+    <body>
+      <div id="fb-root"></div>
+      <script src="http://connect.facebook.net/en_US/all.js">
+      </script>
+      <script>
+         FB.init({ 
+            appId:'278272958863760', cookie:true, 
+            status:true, xfbml:true 
+         });
+
+         FB.api('/me', function(user) {
+           if(user != null) {
+              var image = document.getElementById('image');
+              image.src = 'http://graph.facebook.com/' + user.id + '/picture';
+              var name = document.getElementById('name');
+              name.innerHTML = user.name;
+				
+			  var info = document.getElementById('info');
+			  info.innerHTML = user.gender + " " + user.username + " " + user.link
+           }
+         });
+		 FB.api('/me', function(user) {
+			 var locationHTML = document.getElementById('location');
+			 console.log(user.location); 
+			 locationHTML.innerHTML = user.location
+			 
+		 });
+
+		 FB.api('/me', function(user) {
+			 var bioHTML = document.getElementById('bio');
+			 console.log(user.quotes);
+			 bioHTML.innerHTML = user.quotes
+			 
+		 });
+		 FB.api('/me/likes', function(likes) {
+			 var likesHTML = document.getElementById('likes');
+			 console.log(likes);
+			 likesHTML.innerHTML = likes.data
+			 
+		 });
+
+       </script>
+	   <fb:login-button perms="email, user_checkins, user_about_me, user_location, user_likes">
+         Login with Facebook
+       </fb:login-button>
+         <div align="center">
+           		<img id="image"/>
+           		<div id="name"></div>
+				<pre id="info"></pre>
+				<pre id="location"></pre>
+				<pre id="location2"></pre>
+				<pre id="bio"></pre>
+				<pre id="likes"></pre>
+         </div>
+    </body>
+ </html>

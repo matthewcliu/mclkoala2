@@ -1,24 +1,22 @@
 Koala2::Application.routes.draw do
-  #get "pages/home"
   match "welcome" => 'pages#welcome', :as => :welcome
+  match "photos" => 'pages#photos', :as => :photos
+  match "likes" => 'pages#likes', :as => :likes
 
-  #get "pages/noauth"
-
-  #get "pages/fakeauth"
-
-  #get "pages/realauth"
-  
-  #get "pages/example"
-  
-  #get "pages/jquerytest"
-
-  #get "pages/davey"
-
- 
-  #get "pages/davey2"
 
 
   root :to => "pages#home"
+
+
+  #get "pages/home"
+  #get "pages/noauth"
+  #get "pages/fakeauth"
+  #get "pages/realauth"
+  #get "pages/example"
+  #get "pages/jquerytest"
+  #get "pages/davey"
+  #get "pages/davey2"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
