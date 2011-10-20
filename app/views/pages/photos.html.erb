@@ -8,6 +8,10 @@
 	</div>
 	<br />
 
+	<% @photos.each do |photo| %>
+		<%= image_tag photo["source"] %>
+		<br />
+	<% end %>
 
 
 <%= debug cookies %> 

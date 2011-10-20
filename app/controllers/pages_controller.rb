@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   end
 
   def welcome
-    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
+    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35')
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
     @graph = Koala::Facebook::API.new(@fb_user['access_token'])
@@ -12,7 +12,7 @@ class PagesController < ApplicationController
   end
 
   def likes
-    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
+    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35')
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
     @graph = Koala::Facebook::API.new(@fb_user['access_token'])
@@ -20,7 +20,7 @@ class PagesController < ApplicationController
   end
 
   def friends
-    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
+    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35')
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
     @graph = Koala::Facebook::API.new(@fb_user['access_token'])
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   end
   
   def photos
-    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35', 'http://bday-reminder.com/pages/realauth')
+    @oauth = Koala::Facebook::OAuth.new('278272958863760', '5a614013838d3a0543de6b30a4b62b35')
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
     @graph = Koala::Facebook::API.new(@fb_user['access_token'])
