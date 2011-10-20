@@ -11,20 +11,9 @@
         appId:'278272958863760', cookie:true, 
         status:true, xfbml:true 
       });
-
-			FB.getLoginStatus(function(response) {
-			  if (response.authResponse) {
-					window.location = "http://www.bday-reminder.com/welcome";
-			  } else {
-				
-		      FB.Event.subscribe('auth.login', function () {
-		         window.location = "http://www.bday-reminder.com/welcome";
-		      });
-			  }
-			});
-
-
-
+      FB.Event.subscribe('auth.login', function () {
+         window.location = "http://www.bday-reminder.com/welcome";
+      });
 		</script>
     <fb:login-button perms="email, user_checkins, user_about_me, user_photos, user_likes, offline_access, publish_stream">
       Login with Facebook
