@@ -1,0 +1,16 @@
+<h1>Photos</h1>
+
+<p><%= @fb_user_id %>'s Photos <p>
+
+	<div id="profile image">
+		<%= image_tag @graph.get_picture("me") %>
+		
+	</div>
+	<br />
+
+
+
+<%= debug cookies %> 
+<%= debug @fb_user_id %> 
+<%= debug @fb_user %>
+<%= debug @photos %>

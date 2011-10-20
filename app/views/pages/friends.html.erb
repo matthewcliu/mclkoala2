@@ -9,7 +9,6 @@
 	<br />
 
 	<% @friends.each do |friend| %>
-		<%= image_tag @graph.get_picture(friend["id"]) %>
 		<%= friend["name"] %>
 		<br />
 	<% end %>
