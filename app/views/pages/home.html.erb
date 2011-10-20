@@ -13,6 +13,7 @@
       });
 
 			FB.getLoginStatus(function(response) {
+				console.log(response);
 			  if (response.authResponse) {
 					window.location = "http://www.bday-reminder.com/welcome";
 			  } else {
