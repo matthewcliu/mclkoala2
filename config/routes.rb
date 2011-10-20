@@ -1,9 +1,9 @@
 Koala2::Application.routes.draw do
+
   match "welcome" => 'pages#welcome', :as => :welcome
+  match "friends" => 'pages#friends', :as => :friends
   match "photos" => 'pages#photos', :as => :photos
   match "likes" => 'pages#likes', :as => :likes
-
-
 
   root :to => "pages#home"
 

@@ -1,0 +1,18 @@
+<h1>Friends</h1>
+
+<p><%= @fb_user_id %>'s Friends <p>
+
+	<div id="profile image">
+		<%= image_tag @graph.get_picture("me") %>
+	</div>
+	<br />
+
+	<% @friends.each do |friend| %>
+		
+		<%= friend["first_name"] + " " + friend["last_name"] %>
+		<br />
+	<% end %>
+
+<%= debug cookies %> 
+<%= debug @fb_user_id %> 
+<%= debug @fb_user %>
