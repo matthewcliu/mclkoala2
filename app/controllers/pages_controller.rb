@@ -36,5 +36,8 @@ class PagesController < ApplicationController
     @photos = @graph.get_connections("me", "photos")
   end
   
+  def registration
+  end
+  
 end
 
