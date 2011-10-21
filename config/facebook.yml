@@ -1,0 +1,11 @@
+# config/facebook.yml
+development:
+ app_id: 278272958863760
+ secret_key: 5a614013838d3a0543de6b30a4b62b35
+ callback_url: http://localhost:3000/
+test:
+ ...
+production:
+ app_id: 278272958863760
+ secret_key: 5a614013838d3a0543de6b30a4b62b35
+ callback_url: http://www.bday-reminder.com/

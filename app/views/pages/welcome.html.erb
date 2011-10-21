@@ -15,6 +15,23 @@
 	<div>
 		<%= link_to 'Likes', likes_path %>
 	</div><br />
+	
+	<div>
+		<a href = "http://www.facebook.com/dialog/oauth/?
+		  scope=email,user_birthday&
+		  client_id=278272958863760&
+		  redirect_uri=http://www.bday-reminder.com/serverside&
+		  response_type=token">Direct URL login</a>
+	</div><br />
+
+	<div>
+		<a href = "http://www.facebook.com/dialog/feed/?
+		  scope=email,user_birthday&
+		  client_id=278272958863760&
+		  redirect_uri=http://www.bday-reminder.com/serverside&
+		  response_type=token">Post to Wall</a>
+	</div><br />
+	
 
 <%= debug cookies %> 
 <%= debug @fb_user_id %> 

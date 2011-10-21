@@ -5,6 +5,7 @@ Koala2::Application.routes.draw do
   match "photos" => 'pages#photos', :as => :photos
   match "likes" => 'pages#likes', :as => :likes
   match "registration" => 'pages#registration', :as => :registration
+  match "serverside" => 'pages#serverside', :as => :serverside
 
   root :to => "pages#home"
 

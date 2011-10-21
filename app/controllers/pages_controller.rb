@@ -39,5 +39,8 @@ class PagesController < ApplicationController
   def registration
   end
   
+  def serverside
+  end
+  
 end
 
