@@ -6,29 +6,31 @@
    	<div id="fb-root"></div>
    	<script src="http://connect.facebook.net/en_US/all.js">
    	</script>
+   	<script>
+     	FB.init({ 
+        appId:'278272958863760', cookie:true, 
+        status:true, xfbml:true
+      });
 
-		<script>
-		      window.fbAsyncInit = function() {
-		        FB.init({
-		          appId      : '278272958863760',
-		          status     : true, 
-		          cookie     : true,
-		          xfbml      : true
-		        });
+			(function(d){
+         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+         js = d.createElement('script'); js.id = id; js.async = true;
+         js.src = "//connect.facebook.net/en_US/all.js";
+         d.getElementsByTagName('head')[0].appendChild(js);
+       }(document));
 
-		        FB.Event.subscribe('auth.login', function(response) {
-		          window.location = "http://www.cnn.com/";
-		        });
-		      };
-
-		      (function(d){
-		         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
-		         js = d.createElement('script'); js.id = id; js.async = true;
-		         js.src = "//connect.facebook.net/en_US/all.js";
-		         d.getElementsByTagName('head')[0].appendChild(js);
-		       }(document));
-		    </script>
-   	
+			FB.getLoginStatus(function(response) {
+				console.log(response);
+			  if (response.authResponse) {
+					window.location = "http://www.bday-reminder.com/welcome";
+			  } else {
+				
+		      FB.Event.subscribe('auth.login', function () {
+		         window.location = "http://www.bday-reminder.com/welcome";
+		      });
+			  }
+			});
+		</script>
     <fb:login-button perms="email, user_checkins, user_about_me, user_photos, user_likes, offline_access, publish_stream">
       Login with Facebook
     </fb:login-button>
