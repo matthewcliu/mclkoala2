@@ -17,7 +17,9 @@ puts "*"*200
 
 
 $app_id = fb_options['app_id']
-$secret_key = fb_options['app_id']
-$callback_url = fb_options['app_id']
+$secret_key = fb_options['secret_key']
+$callback_url = fb_options['callback_url']
 
 puts $app_id
+puts $secret_key
+puts $callback_url
