@@ -22,7 +22,7 @@
 			FB.getLoginStatus(function(response) {
 				console.log(response);
 				console.log(status);
-			  if (response.authResponse) {
+			  if (response.status == 'connected') {
 					window.location = "http://www.bday-reminder.com/welcome";
 			  } else {
 				
