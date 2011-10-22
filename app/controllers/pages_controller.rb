@@ -36,6 +36,12 @@ class PagesController < ApplicationController
     @photos = @graph.get_connections("me", "photos")
   end
   
+  def post
+    @oauth = Koala::Facebook::OAuth.new($app_id, $secret_key)
+    @fb_user = @oauth.get_user_info_from_cookies(cookies)
+    @fb_user_id = @oauth.get_user_from_cookies(cookies)
+    @graph = Koala::Facebook::API.new(@fb_user['access_token'])    
+  
   def registration
   end
   
