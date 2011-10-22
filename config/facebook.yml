@@ -7,9 +7,9 @@ development:
 test:
   app_id: 278272958863760
   secret_key: 5a614013838d3a0543de6b30a4b62b35
-  callback_url: 'http://www.bday-reminder.com/'
+  callback_url: http://www.bday-reminder.com/
 
 production:
   app_id: 278272958863760
   secret_key: 5a614013838d3a0543de6b30a4b62b35
-  callback_url: 'http://www.bday-reminder.com/'
+  callback_url: http://www.bday-reminder.com/

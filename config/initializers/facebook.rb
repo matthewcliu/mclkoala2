@@ -1,4 +1,4 @@
-fb_options = YAML.load_file(Rails.root.join("config", "facebook.yml"))[:development]
+fb_options = YAML.load_file(Rails.root.join("config", "facebook.yml"))[Rails.env]
 
 puts "*"*200
 puts YAML.load_file(Rails.root.join("config", "facebook.yml"))
