@@ -41,6 +41,7 @@ class PagesController < ApplicationController
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
     @graph = Koala::Facebook::API.new(@fb_user['access_token'])
+    @graph.put_wall_post("I'm learning how to use koala")
   end    
   
   def registration
