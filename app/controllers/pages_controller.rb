@@ -7,6 +7,8 @@ class PagesController < ApplicationController
     @oauth = Koala::Facebook::OAuth.new($app_id, $secret_key)
     @fb_user = @oauth.get_user_info_from_cookies(cookies)
     @fb_user_id = @oauth.get_user_from_cookies(cookies)
+    @graph = Koala::Facebook::API.new(@fb_user['access_token'])
+    
   end
 
   def likes
